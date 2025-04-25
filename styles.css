@@ -83,6 +83,8 @@ nav {
     color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
 }
 
 .nav-links a:hover {
@@ -92,6 +94,19 @@ nav {
 .burger {
     display: none;
     cursor: pointer;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
@@ -437,6 +452,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 2rem;
 }
 
 .info-item {
@@ -907,31 +923,6 @@ textarea.error {
     border-color: var(--accent-color) !important;
 }
 
-/* Estilos para el calendario y horas */
-input[type="date"] {
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 20px;
-    padding-right: 35px;
-}
-
-/* Estilos para el resumen de la cita */
-.summary-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    animation: fadeIn 0.3s ease;
-}
 
 /* Animaciones */
 @keyframes fadeIn {
@@ -943,79 +934,6 @@ input[type="date"] {
     }
 }
 
-
-/* Botón Volver Arriba */
-.back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--secondary-color);
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    transition: all 0.3s ease;
-    z-index: 999;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.back-to-top.visible {
-    opacity: 1;
-}
-
-.back-to-top:hover {
-    background-color: #2980b9;
-    transform: translateY(-3px);
-}
-
-.back-to-top i {
-    font-size: 20px;
-}
-
-/* Tooltips */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltip-text {
-    visibility: hidden;
-    width: 200px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.tooltip .tooltip-text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #333 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
 
 /* Botón de Modo Oscuro */
 .dark-mode-toggle {
@@ -1432,52 +1350,6 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 5px 15px rgba(37, 99, 235, 0.1);
 }
 
-/* Indicadores de Progreso */
-.progress-indicator {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-.progress-step {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--light-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-color);
-    font-weight: bold;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.progress-step.active {
-    background: var(--primary-color);
-    color: var(--white);
-}
-
-.progress-step.completed {
-    background: var(--secondary-color);
-    color: var(--white);
-}
-
-.progress-step::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    width: 50px;
-    height: 2px;
-    background: var(--light-bg);
-    transform: translateY(-50%);
-}
-
-.progress-step:last-child::after {
-    display: none;
-}
 
 /* Tooltips Mejorados */
 .tooltip {
@@ -1560,26 +1432,6 @@ input:focus, select:focus, textarea:focus {
     color: var(--accent-color);
 }
 
-/* Navegación Mejorada */
-.nav-links a {
-    position: relative;
-    padding: 0.5rem 0;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
 
 /* Scroll Suave */
 html {
@@ -1615,33 +1467,10 @@ html {
     background: var(--secondary-color);
     transform: translateY(-5px);
 }
-
-/* Notificaciones */
-.notification {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    padding: 1rem 2rem;
-    background: var(--white);
-    color: var(--text-color);
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-lg);
-    transform: translateX(120%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
+.back-to-top i {
+    font-size: 20px;
 }
 
-.notification.show {
-    transform: translateX(0);
-}
-
-.notification.success {
-    border-left: 4px solid var(--secondary-color);
-}
-
-.notification.error {
-    border-left: 4px solid var(--accent-color);
-}
 
 /* Modo Oscuro para Elementos de UX */
 [data-theme="dark"] .progress-step {
@@ -1852,65 +1681,6 @@ html {
     .slider-track {
         gap: 20px;
     }
-}
-
-#faq
-.faq-section {
-    padding: 60px 20px;
-    background-color: var(--white);
-    color: var(--text-color);
-}
-
-.faq-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    margin-bottom: 15px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    text-align: left;
-    font-size: 18px;
-    padding: 15px 0;
-    cursor: pointer;
-    font-weight: 500;
-    color: var(--primary-color, #2c3e50);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    padding-left: 15px;
-    padding-right: 15px;
-    transition: max-height 0.5s ease-in-out;
-}
-
-.faq-item.open .faq-answer {
-    max-height: 500px; /* Cambia a un valor alto, esto se ajusta automáticamente */
-    padding-bottom: 10px;
-}
-
-.faq-icon {
-    font-size: 22px;
-    transition: transform 0.3s ease, content 0.3s ease;
-}
-
-.faq-item.open .faq-icon {
-    transform: rotate(180deg);
 }
 
 
