@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultorio médico especializado en atención de calidad. Ofrecemos servicios de cardiología, neurología y medicina general con profesionales altamente capacitados.">
+    <meta name="keywords" content="consultorio médico, cardiología, neurología, medicina general, citas médicas, atención médica">
+    <meta name="author" content="MediCare">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="MediCare - Consultorio Médico Especializado">
+    <meta property="og:description" content="Atención médica de calidad con profesionales altamente capacitados en cardiología, neurología y medicina general.">
+    <meta property="og:image" content="https://medicare.com/images/og-image.jpg">
+    <meta property="og:url" content="https://medicare.com">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#2c3e50">
+    
+    <title>MediCare | Consultorio Médico Especializado</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>MediCare</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#doctores">Doctores</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="citas.html" class="cta-nav">Agendar Cita</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <div class="clock-container">
+                <div class="clock">
+                    <div class="time"></div>
+                    <div class="date"></div>
+                </div>
+            </div>
+            <h1>Cuidando tu Salud con Excelencia</h1>
+            <p>Ofrecemos atención médica de calidad con profesionales altamente capacitados</p>
+            <a href="citas.html" class="cta-button">Agenda tu Cita</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Cardiología</h3>
+                <p>Atención especializada en el cuidado de tu corazón</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-brain"></i>
+                <h3>Neurología</h3>
+                <p>Diagnóstico y tratamiento de trastornos neurológicos</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-stethoscope"></i>
+                <h3>Medicina General</h3>
+                <p>Atención integral para toda la familia</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="testimonials">
+        <h2>Lo que dicen nuestros pacientes</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://via.placeholder.com/100" alt="Paciente" class="testimonial-image">
+                    <div class="testimonial-info">
+                        <h3>María González</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"Excelente atención y profesionalismo. El Dr. Pérez me ayudó a superar mis problemas cardíacos con un tratamiento personalizado y efectivo."</p>
+                <div class="testimonial-date">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>15 de Marzo, 2024</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://via.placeholder.com/100" alt="Paciente" class="testimonial-image">
+                    <div class="testimonial-info">
+                        <h3>Carlos Rodríguez</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"La atención en MediCare es excepcional. La Dra. García es muy profesional y dedicada. Recomiendo ampliamente sus servicios neurológicos."</p>
+                <div class="testimonial-date">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>10 de Marzo, 2024</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://via.placeholder.com/100" alt="Paciente" class="testimonial-image">
+                    <div class="testimonial-info">
+                        <h3>Laura Martínez</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"El servicio de medicina general es excelente. Los doctores son muy atentos y el personal administrativo muy amable. Siempre me siento bien atendida."</p>
+                <div class="testimonial-date">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>5 de Marzo, 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctores" class="doctors">
+        <h2>Nuestros Especialistas</h2>
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                <div class="doctor-card-inner">
+                    <div class="doctor-card-front">
+                        <div class="doctor-image">🏥</div>
+                        <h3>Dr. Juan Pérez</h3>
+                        <p>Cardiólogo</p>
+                    </div>
+                    <div class="doctor-card-back">
+                        <h3>Dr. Juan Pérez</h3>
+                        <p>Especialista en Cardiología</p>
+                        <p>15 años de experiencia</p>
+                        <p>Horario: Lunes a Viernes</p>
+                        <a href="citas.html" class="cta-button">Agendar Cita</a>
+                    </div>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <div class="doctor-card-inner">
+                    <div class="doctor-card-front">
+                        <div class="doctor-image">🏥</div>
+                        <h3>Dra. María García</h3>
+                        <p>Pediatra</p>
+                    </div>
+                    <div class="doctor-card-back">
+                        <h3>Dra. María García</h3>
+                        <p>Especialista en Pediatría</p>
+                        <p>12 años de experiencia</p>
+                        <p>Horario: Lunes a Sábado</p>
+                        <a href="citas.html" class="cta-button">Agendar Cita</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contáctanos</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Teléfono" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit" class="submit-button">Enviar Mensaje</button>
+            </form>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Av. Principal 123, Ciudad</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+123 456 7890</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@medicare.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MediCare</h3>
+                <p>Cuidando tu salud con profesionalismo y dedicación</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario de Atención</h3>
+                <p>Lunes a Viernes: 8:00 - 20:00</p>
+                <p>Sábados: 9:00 - 14:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MediCare. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Chat en Vivo -->
+    <div class="chat-button" id="chatButton">
+        <i class="fas fa-comments"></i>
+    </div>
+    
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <h3>Chat de Consultas</h3>
+            <button class="close-chat" id="closeChat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Los mensajes se cargarán dinámicamente -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Botón de Modo Oscuro -->
+    <button id="themeToggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+</body>
+</html> 
