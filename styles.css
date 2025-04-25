@@ -49,11 +49,10 @@ header {
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.9);
 }
 
 [data-theme="dark"] header {
-    background-color: rgba(30, 41, 59, 0.9);
+    background-color: rgba(59, 30, 30, 0.9);
 }
 
 nav {
@@ -247,6 +246,7 @@ nav {
     position: relative;
     perspective: 1000px;
     height: 400px;
+    cursor: pointer;
 }
 
 .doctor-card:hover {
@@ -258,7 +258,8 @@ nav {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s;
+    text-align: center;
+    transition: transform 0.8s;
     transform-style: preserve-3d;
 }
 
@@ -271,74 +272,63 @@ nav {
     position: absolute;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 1rem;
-    padding: 2rem;
-    background: var(--white);
-    box-shadow: var(--shadow-md);
-}
-
-.doctor-card-back {
-    transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 2rem;
+}
+
+.doctor-card-front {
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+.doctor-card-back {
+    background-color: var(--primary-color);
     color: var(--white);
+    transform: rotateY(180deg);
 }
 
 .doctor-image {
-    width: 100%;
-    height: 300px;
-    background: var(--light-bg);
+    width: 120px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 8rem;
-    color: var(--primary-color);
-    position: relative;
-    overflow: hidden;
-    border-radius: 0.5rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
-}
-
-.doctor-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.1));
+    background-color: var(--light-bg);
+    border-radius: 50%;
 }
 
 .doctor-info {
+    width: 100%;
     text-align: center;
-    padding: 1rem;
 }
 
 .doctor-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
     color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .doctor-info p {
     color: var(--text-color);
     opacity: 0.8;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .doctor-specialty {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     color: var(--white);
     border-radius: 2rem;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .doctor-schedule {
@@ -564,6 +554,20 @@ footer {
 
     .hero-content h1 {
         font-size: 2.5rem;
+    }
+
+    .doctor-card {
+        height: 350px;
+    }
+
+    .doctor-image {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+
+    .doctor-info h3 {
+        font-size: 1.3rem;
     }
 }
 
@@ -1392,10 +1396,6 @@ body.dark-mode .confirm-button:hover {
     color: #bdc3c7;
 }
 
-[data-theme="dark"] .notification {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-}
 
 
 [data-theme="dark"] .clock {
