@@ -197,6 +197,7 @@ nav {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .service-card:hover i {
@@ -903,53 +904,6 @@ footer {
     }
 }
 
-/* Chat en Vivo Mejorado */
-.chat-button {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 4rem;
-    height: 4rem;
-    background: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: var(--shadow-lg);
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
-
-.chat-button:hover {
-    transform: scale(1.1);
-    background: var(--secondary-color);
-}
-
-.chat-button i {
-    color: var(--white);
-    font-size: 24px;
-}
-
-.chat-container {
-    position: fixed;
-    bottom: 6rem;
-    right: 2rem;
-    width: 350px;
-    height: 500px;
-    background: var(--white);
-    border-radius: 1rem;
-    box-shadow: var(--shadow-lg);
-    display: none;
-    flex-direction: column;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.chat-container.active {
-    display: flex;
-    animation: slideIn 0.3s ease;
-}
 
 @keyframes slideIn {
     from {
@@ -962,46 +916,6 @@ footer {
     }
 }
 
-.chat-header {
-    padding: 15px;
-    background-color: var(--input-bg);
-    color: var(--white);
-    border-radius: 10px 10px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.chat-header h3 {
-    margin: 0;
-    font-size: 18px;
-}
-
-.close-chat {
-    background: none;
-    border: none;
-    color: var(--white);
-    cursor: pointer;
-    font-size: 20px;
-    padding: 5px;
-}
-
-.chat-messages {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.chat-message {
-    max-width: 80%;
-    padding: 10px 15px;
-    border-radius: 15px;
-    position: relative;
-    animation: fadeIn 0.3s ease;
-}
 
 @keyframes fadeIn {
     from {
@@ -1014,23 +928,6 @@ footer {
     }
 }
 
-.chat-message.user {
-    background-color: var(--primary-color);
-    align-self: flex-end;
-    border-bottom-right-radius: 5px;
-}
-
-.chat-message.bot {
-    background-color: var(--input-bg);
-    align-self: flex-start;
-    border-bottom-left-radius: 5px;
-}
-
-.chat-message p {
-    margin: 0;
-    white-space: pre-line;
-    line-height: 1.4;
-}
 
 .message-time {
     font-size: 10px;
@@ -1075,75 +972,8 @@ footer {
     }
 }
 
-.chat-input {
-    padding: 15px;
-    border-top: 1px solid #eee;
-    display: flex;
-    gap: 10px;
-}
-
-.chat-input input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    outline: none;
-    transition: border-color 0.3s ease;
-    background-color: var(--input-bg);
-}
-
-.chat-input input:focus {
-    border-color: var(--primary-color);
-}
-
-.chat-input button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.chat-input button:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1.1);
-}
 
 /* Responsive */
-@media (max-width: 768px) {
-    .chat-container {
-        width: 90%;
-        height: 60vh;
-        right: 5%;
-    }
-    
-    .chat-button {
-        bottom: 10px;
-        right: 10px;
-    }
-}
-
-/* Estilos para el botón de navegación de citas */
-.cta-nav {
-    background-color: var(--primary-color);
-    color: var(--white) !important;
-    padding: 8px 20px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    margin-left: 5px;
-}
-
-.cta-nav:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* Estilos para la página de citas */
 .appointments-page {
@@ -1493,28 +1323,6 @@ body.dark-mode .confirm-button:hover {
     background-color: #27ae60;
 }
 
-body.dark-mode .chat-container {
-    background-color: var(--card-bg);
-}
-
-body.dark-mode .chat-header {
-    background-color: var(--input-bg);
-}
-
-body.dark-mode .chat-message.user {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-}
-
-body.dark-mode .chat-message.bot {
-    background-color: var(--input-bg);
-    color: var(--text-color);
-}
-
-body.dark-mode .chat-input input {
-    background-color: var(--input-bg);
-    color: var(--text-color);
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -1570,10 +1378,6 @@ body.dark-mode .chat-input input {
 [data-theme="dark"] .appointment-form,
 [data-theme="dark"] .appointment-info,
 [data-theme="dark"] .testimonial-card,
-[data-theme="dark"] .chat-container {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-}
 
 [data-theme="dark"] input,
 [data-theme="dark"] select,
@@ -1593,15 +1397,6 @@ body.dark-mode .chat-input input {
     color: var(--text-color);
 }
 
-[data-theme="dark"] .chat-message.user {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-[data-theme="dark"] .chat-message.bot {
-    background-color: var(--input-bg);
-    color: var(--text-color);
-}
 
 [data-theme="dark"] .clock {
     background: rgba(255, 255, 255, 0.1);
@@ -1648,10 +1443,6 @@ body.dark-mode .chat-input input {
         margin-bottom: 2rem;
     }
     
-    .chat-container {
-        width: 90%;
-        right: 5%;
-    }
 }
 
 /* Modo oscuro mejorado */
