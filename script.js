@@ -488,3 +488,26 @@ function toggleTheme() {
 
 // Event listener para el botón de cambio de tema
 document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+// Evento click para las preguntas frecuentes
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const icon = button.querySelector('.faq-icon');
+        const answer = faqItem.querySelector('.faq-answer');
+        const isOpen = faqItem.classList.toggle('open');
+
+        // Cambiar el ícono entre '+' y '–'
+        icon.textContent = isOpen ? "–" : "+";
+
+        // Controlamos el max-height para la animación
+        if (isOpen) {
+            answer.style.maxHeight = answer.scrollHeight + "px"; // Ajusta a la altura del contenido
+        } else {
+            answer.style.maxHeight = "0"; // Vuelve a 0 cuando se cierra
+        }
+    });
+});
+
+
+

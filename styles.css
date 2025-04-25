@@ -173,6 +173,7 @@ nav {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .service-card {
@@ -612,98 +613,6 @@ footer {
     }
 }
 
-/* Estilos para la sección de citas */
-.appointments {
-    padding: 80px 20px;
-    background-color: #f8f9fa;
-}
-
-.appointment-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.appointment-form {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.appointment-form .form-group {
-    margin-bottom: 20px;
-}
-
-.appointment-form label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--text-color);
-    font-weight: 500;
-}
-
-.appointment-form input,
-.appointment-form select,
-.appointment-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: var(--input-bg);
-}
-
-.appointment-form textarea {
-    height: 100px;
-    resize: vertical;
-}
-
-.appointment-form .submit-button {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-.appointment-form .submit-button:hover {
-    background-color: #2980b9;
-}
-
-.appointment-info {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.appointment-info h3 {
-    color: var(--text-color);
-    margin-bottom: 20px;
-}
-
-.appointment-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.appointment-info li {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.appointment-info i {
-    margin-right: 10px;
-    color: var(--secondary-color);
-}
 
 .emergency-contact {
     margin-top: 30px;
@@ -719,18 +628,6 @@ footer {
 .emergency-contact p {
     color: var(--text-color);
     font-size: 18px;
-}
-
-/* Responsive design para la sección de citas */
-@media (max-width: 768px) {
-    .appointment-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .appointment-form,
-    .appointment-info {
-        padding: 20px;
-    }
 }
 
 /* Estilos para la sección de testimonios */
@@ -977,22 +874,6 @@ footer {
 }
 
 
-/* Responsive */
-
-/* Estilos para la página de citas */
-.appointments-page {
-    padding-top: 100px;
-    min-height: calc(100vh - 100px);
-}
-
-.appointments-page .appointments {
-    padding: 40px 20px;
-}
-
-.appointments-page .appointment-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 /* Responsive para el botón de navegación */
 @media (max-width: 768px) {
@@ -1007,34 +888,6 @@ footer {
     }
 }
 
-/* Estilos para el formulario de citas */
-.appointment-form {
-    position: relative;
-}
-
-.form-progress {
-    margin-bottom: 20px;
-}
-
-.progress-bar {
-    height: 8px;
-    background-color: #eee;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 5px;
-}
-
-.progress {
-    height: 100%;
-    background-color: var(--secondary-color);
-    transition: width 0.3s ease;
-}
-
-.progress-text {
-    text-align: right;
-    font-size: 0.9rem;
-    color: #666;
-}
 
 /* Estilos para validación de campos */
 .form-group {
@@ -1080,60 +933,6 @@ input[type="date"] {
     animation: fadeIn 0.3s ease;
 }
 
-.appointment-summary {
-    background-color: var(--card-bg);
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.summary-content {
-    margin: 20px 0;
-}
-
-.summary-content p {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.summary-actions {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-.confirm-button,
-.cancel-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.confirm-button {
-    background-color: var(--secondary-color);
-    color: var(--white);
-}
-
-.confirm-button:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-}
-
-.cancel-button {
-    background-color: #eee;
-    color: #666;
-}
-
-.cancel-button:hover {
-    background-color: #ddd;
-}
-
 /* Animaciones */
 @keyframes fadeIn {
     from {
@@ -1144,21 +943,6 @@ input[type="date"] {
     }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .appointment-summary {
-        padding: 20px;
-    }
-    
-    .summary-actions {
-        flex-direction: column;
-    }
-    
-    .confirm-button,
-    .cancel-button {
-        width: 100%;
-    }
-}
 
 /* Botón Volver Arriba */
 .back-to-top {
@@ -1284,8 +1068,6 @@ body.dark-mode .hero-content p {
 
 body.dark-mode .service-card,
 body.dark-mode .doctor-card,
-body.dark-mode .appointment-form,
-body.dark-mode .appointment-info,
 body.dark-mode .testimonial-card {
     background-color: var(--card-bg);
     color: var(--text-color);
@@ -1379,8 +1161,6 @@ body.dark-mode .confirm-button:hover {
 
 [data-theme="dark"] .service-card,
 [data-theme="dark"] .doctor-card,
-[data-theme="dark"] .appointment-form,
-[data-theme="dark"] .appointment-info,
 [data-theme="dark"] .testimonial-card,
 
 [data-theme="dark"] input,
@@ -1616,7 +1396,7 @@ section:nth-child(even) {
 }
 
 .contact {
-    background-color: var(--light-bg);
+    background-color: var(--white);
 }
 
 /* Mejoras de UX - Feedback Visual */
@@ -1868,14 +1648,7 @@ html {
     background: var(--card-bg);
 }
 
-[data-theme="dark"] .progress-step::after {
-    background: var(--border-color);
-}
 
-[data-theme="dark"] .notification {
-    background: var(--card-bg);
-    color: var(--text-color);
-}
 
 [data-theme="dark"] .tooltip .tooltip-text {
     background-color: var(--card-bg);
@@ -2002,4 +1775,142 @@ html {
 
 .dark-mode .form-note {
     color: #ccc;
-} 
+}
+
+/* Insurance Banner Styles */
+.insurance-banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--white);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.slider-track {
+    display: flex;
+    width: calc(200px * 10 * 2);
+    animation: scroll-loop 30s linear infinite;
+    gap: 40px;
+}
+
+.slide {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 20px;
+}
+
+.slide img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.8);
+    transition: filter 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+}
+
+.slide img:hover {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+}
+
+/* Modo oscuro */
+[data-theme="dark"] .insurance-banner {
+    background-color: #2c3e50;
+}
+
+[data-theme="dark"] .slide img {
+    filter: grayscale(100%) brightness(1.2);
+}
+
+[data-theme="dark"] .slide img:hover {
+    filter: grayscale(0%) brightness(1.5);
+}
+
+@keyframes scroll-loop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 📱 Responsive: ajusta tamaño en móviles */
+@media (max-width: 600px) {
+    .slide {
+        width: 120px;
+        padding: 0 10px;
+    }
+
+    .slide img {
+        height: 30px;
+    }
+
+    .slider-track {
+        gap: 20px;
+    }
+}
+
+#faq
+.faq-section {
+    padding: 60px 20px;
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    padding: 15px 0;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--primary-color, #2c3e50);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 500px; /* Cambia a un valor alto, esto se ajusta automáticamente */
+    padding-bottom: 10px;
+}
+
+.faq-icon {
+    font-size: 22px;
+    transition: transform 0.3s ease, content 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+}
+
+
